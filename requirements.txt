@@ -1,0 +1,2 @@
+proxy_seller_user_api==1.0.4
+Requests==2.32.2

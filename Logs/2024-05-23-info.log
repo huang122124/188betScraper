@@ -1,0 +1,17 @@
+2024-05-23 02:11:48,771 - INFO--->: Macth half blocked: 12' 小保加(后备) 0:0 塔勒雷斯(后备)
+2024-05-23 03:35:59,608 - INFO--->: Macth half blocked: 05' 贝雷达比历克斯马里U19 0:0 FH IH U19
+2024-05-23 11:09:20,785 - WARNING--->: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
+2024-05-23 11:09:20,801 - WARNING--->: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1012f8230>: Failed to establish a new connection: [Errno 61] Connection refused')': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
+2024-05-23 11:09:20,803 - WARNING--->: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1012fa450>: Failed to establish a new connection: [Errno 61] Connection refused')': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
+2024-05-23 11:09:20,805 - WARNING--->: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1012faf60>: Failed to establish a new connection: [Errno 61] Connection refused')': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
+2024-05-23 11:09:20,806 - WARNING--->: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1012fa7b0>: Failed to establish a new connection: [Errno 61] Connection refused')': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
+2024-05-23 11:29:43,058 - INFO--->: post_to_telegram success
+2024-05-23 11:30:32,479 - INFO--->: post to telegram successfully
+2024-05-23 11:32:36,303 - INFO--->: post to telegram successfully
+2024-05-23 11:32:48,963 - INFO--->: post to telegram successfully
+2024-05-23 11:52:57,275 - INFO--->: post to telegram successfully
+2024-05-23 17:54:28,159 - INFO--->: post to telegram successfully
+2024-05-23 17:54:38,583 - INFO--->: post to telegram successfully
+2024-05-23 18:00:53,506 - INFO--->: start....
+2024-05-23 18:01:40,222 - INFO--->: post to telegram successfully
+2024-05-23 18:01:53,338 - INFO--->: start....

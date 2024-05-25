@@ -1,0 +1,23 @@
+2024-05-24 01:23:28,671 - INFO--->: Macth half blocked: 20' 博文豪森 0:1 斯瑟姆比克
+2024-05-24 01:23:31,006 - INFO--->: post to telegram successfully
+2024-05-24 02:37:56,611 - INFO--->: found fixed matches: 82' 诺比 3:1 特洛拉坦
+2024-05-24 02:37:57,797 - INFO--->: post to telegram successfully
+2024-05-24 02:44:21,013 - INFO--->: found fixed matches: 65' 索菲亚中央陆军 0:1 查洛摩利
+2024-05-24 02:44:21,589 - INFO--->: post to telegram successfully
+2024-05-24 02:55:32,700 - WARNING--->: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
+2024-05-24 02:55:32,715 - WARNING--->: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10393c5c0>: Failed to establish a new connection: [Errno 61] Connection refused')': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
+2024-05-24 02:55:32,720 - WARNING--->: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10393cd70>: Failed to establish a new connection: [Errno 61] Connection refused')': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
+2024-05-24 02:55:32,725 - WARNING--->: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10393ecf0>: Failed to establish a new connection: [Errno 61] Connection refused')': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
+2024-05-24 02:55:32,731 - WARNING--->: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10393f320>: Failed to establish a new connection: [Errno 61] Connection refused')': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
+2024-05-24 11:27:14,427 - INFO--->: start....
+2024-05-24 15:06:00,670 - INFO--->: post to telegram successfully
+2024-05-24 15:29:04,332 - INFO--->: post to telegram successfully
+2024-05-24 16:21:52,781 - INFO--->: start....
+2024-05-24 18:05:34,971 - INFO--->: start....
+2024-05-24 18:07:15,189 - INFO--->: start....
+2024-05-24 18:32:25,057 - WARNING--->: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
+2024-05-24 21:31:42,864 - WARNING--->: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'RemoteDisconnected('Remote end closed connection without response')': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
+2024-05-24 21:31:42,869 - WARNING--->: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1067b13d0>: Failed to resolve 'cda1.ynjrqwna160.app' ([Errno 8] nodename nor servname provided, or not known)")': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
+2024-05-24 21:31:42,871 - WARNING--->: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1067b17c0>: Failed to resolve 'cda1.ynjrqwna160.app' ([Errno 8] nodename nor servname provided, or not known)")': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
+2024-05-24 21:31:42,872 - WARNING--->: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1067b11c0>: Failed to resolve 'cda1.ynjrqwna160.app' ([Errno 8] nodename nor servname provided, or not known)")': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
+2024-05-24 21:31:42,873 - WARNING--->: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x1067b0e90>: Failed to resolve 'cda1.ynjrqwna160.app' ([Errno 8] nodename nor servname provided, or not known)")': /api/desktop/v1/inplay/menuOdds/1/main/main/000000010011
