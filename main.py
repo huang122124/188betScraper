@@ -12,7 +12,35 @@ class FixedType(Enum):
     FIXED = 2
 
 
+class MatchInfo(object):
+    def __init__(self, matchId, league, period, minutes, home, home_score, away, away_score):
+        self.matchId = matchId
+        self.league = league
+        self.period = period
+        self.minutes = minutes
+        self.home = home
+        self.home_score = home_score
+        self.away = away
+        self.away_score = away_score
+
+    def __str__(self):
+        return self.league + " " + self.minutes + "' " + " " + self.home + " " + self.home_score + ":" + self.away_score + " " + self.away
+
+    def post_to_tg(self, msg=None):
+        if msg is None:
+            RequestHelper.post_to_telegram(str(self))
+        else:
+            RequestHelper.post_to_telegram(msg + str(self))
+
+    def display(self, msg=None):
+        if msg is None:
+            LogHelper.print_info(str(self))
+        else:
+            LogHelper.print_info(msg + str(self))
+
+
 fix_matches = []
+inplay_matches = []
 
 
 def getInplayEvents():
@@ -23,8 +51,26 @@ def getInplayEvents():
         if (data.get('success')):
             leagues = data.get('data').get('seasons')
             parseEvents(leagues)
+            check_match_removed()
     except Exception as e:
         LogHelper.print_error(e)
+
+
+def update_inplay_matches(match_info):
+    if match_info not in inplay_matches:
+        # need to test the minutes vaule when match end
+        if not (match_info.minutes and int(match_info.minutes) > 80):
+            inplay_matches.append(match_info)
+    else:
+        inplay_matches.remove(match_info)
+
+
+def check_match_removed():
+    if len(inplay_matches) > 0:
+        for match in inplay_matches:
+            match.display("Match Removed:")
+            match.post_to_tg("Match Removed:")
+        inplay_matches.clear()
 
 
 def parseEvents(leagues):
@@ -43,28 +89,31 @@ def parseEvents(leagues):
                     home_score = str(event.get('competitors').get('home').get('score'))
                     away = event.get('competitors').get('away').get('name')
                     away_score = str(event.get('competitors').get('away').get('score'))
-                    # -------------------------
                     markets = event.get('markets')
-                    if len(markets) > 0 and minutes != "":
+                    match_info = MatchInfo(matchId, league_name, period, minutes, home, home_score, away, away_score)
+                    # add the match into inplay list
+                    update_inplay_matches(match_info)
+                    if len(markets) > 0:
                         fixed_type = get_fixed_type(period, minutes, markets)
                         if fixed_type == FixedType.FIXED:
-                            if matchId not in fix_matches:
-                                fix_matches.append(matchId)
-                                msg = league_name + " " + minutes + "' " + " " + home + " " + home_score + ":" + away_score + " " + away
-                                LogHelper.print_info(msg)
-                                RequestHelper.post_to_telegram(msg)
+                            if match_info not in fix_matches:
+                                fix_matches.append(match_info)
+                                match_info.display()
+                                match_info.post_to_tg()
                         elif fixed_type == FixedType.HALF_BLOCKED:
-                            if matchId not in fix_matches:
-                                fix_matches.append(matchId)
-                                msg = "Macth half blocked:" + league_name + " " + minutes + "' " + home + " " + home_score + ":" + away_score + " " + away
-                                LogHelper.print_info(msg)
-                                RequestHelper.post_to_telegram(msg)
+                            if match_info not in fix_matches:
+                                fix_matches.append(match_info)
+                                msg = "Macth half blocked:"
+                                match_info.display(msg)
+                                match_info.post_to_tg(msg)
                         else:
-                            pass
+                            if match_info in fix_matches:
+                                fix_matches.remove(match_info)
                             # LogHelper.print_info(
                             #     "Not fixed--->> " + period_text +" "+ minutes + "' " + home + " " + home_score + ":" + away_score + " " + away)
 
 
+# all params in string
 def get_fixed_type(period, minutes, markets):
     available_ah = False
     available_ou = False

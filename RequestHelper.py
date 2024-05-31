@@ -24,8 +24,6 @@ def post_to_telegram(message):
     }, proxies={'http':'127.0.0.1:7890','https':'127.0.0.1:7890'},timeout=20)
     if response.status_code != 200:
         LogHelper.print_error("post_to_telegram failed: "+str(response.text))
-    else:
-        LogHelper.print_info("post to telegram successfully")
 
 if __name__ == '__main__':
     getInplayEvents()
